@@ -1,0 +1,13 @@
+p{
+    margin:0;padding-top:0;
+}
+.Sub-heading{
+    background-color: lightgray; line-height: 20px; padding: 10px; text-align: center; margin:0; padding-top:0;
+}
+.content{
+    border: 1px solid black;    
+}
+
+*{
+    margin-left : 5px;
+}
