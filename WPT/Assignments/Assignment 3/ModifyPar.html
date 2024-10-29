@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Paragraph</title>
+</head>
+<body>
+
+    <h2>Style Modifier</h2>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odio quasi assumenda ipsam fugit! Fugit, eum aspernatur. Laboriosam facere praesentium expedita totam eum laudantium distinctio quam deleniti quia architecto!.</p>
+
+    <button onclick="modifyStyle()">Submit</button>
+
+    <script>
+        function modifyStyle() {
+            const text = document.getElementById("paragraph");
+            text.style.color = "green";
+            text.style.fontSize = "20px";
+            text.style.fontWeight = "500";
+            text.style.fontFamily = "Times New Roman, sans-serif";
+        }
+    </script>
+
+</body>
+</html>

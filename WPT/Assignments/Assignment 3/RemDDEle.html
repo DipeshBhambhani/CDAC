@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Dropdown Items</title>
+</head>
+<body>
+    <select id="menu">
+        <option value="option1">Khaman</option>
+        <option value="option2">Dhokla</option>
+        <option value="option3">Fafda</option>
+        <option value="option4">Jalebi</option>
+    </select>
+    <button onclick="removeDropdownItems()">Eat it all</button>
+
+    <script>
+        function removeDropdownItems() {
+            const dropdown = document.getElementById("menu");
+
+            while (dropdown.options.length > 0) {
+                dropdown.remove(0);
+            }
+        }
+    </script>
+</body>
+</html>
