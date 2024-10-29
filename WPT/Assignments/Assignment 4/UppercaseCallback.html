@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Uppercase Callback</title>
+</head>
+<body>
+
+    <h2>Convert String to Uppercase Using Callback</h2>
+
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="processData(document.getElementById('inputString').value, toUpperCase)">
+        Convert to Uppercase
+    </button>
+
+    <p>Result: <span id="result"></span></p>
+
+    <script>
+        function toUpperCase(str) {
+            return str.toUpperCase();
+        }
+
+        function processData(inputString, callback) {
+            const result = callback(inputString);
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+
+</body>
+</html>
