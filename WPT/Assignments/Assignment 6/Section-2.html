@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section-2</title>
+    <style>
+        #amount{
+            margin-bottom: 20px;
+        }
+        .btn{
+            margin-bottom: 20px;
+            background-color: rgb(47, 152, 244);
+            padding: 8px 15px;
+            border-radius: 25px;
+            color: white;
+            border:none ;
+            margin-right: 5px;
+            align-items: center;
+            font-size: 13px;
+        }
+        .btn:hover{
+            background-color: rgb(44, 127, 228);
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="amount" placeholder="Enter Amount"><br>
+    <button onclick="add()" class="btn">Credit</button>
+    <button onclick="sub()" class="btn">Debit</button><br>
+    <span id="Balance">Balance :<span id="final-amt"> 0</span></span>
+    
+    <script>
+        function add(){
+            const amount=parseFloat(document.getElementById("amount").value);
+            const Final_amount=parseFloat(document.getElementById("final-amt").innerHTML);
+            let sum=Final_amount+amount;
+            document.getElementById("final-amt").innerHTML=sum;            
+        }
+        function sub(){
+            const amount=parseFloat(document.getElementById("amount").value);
+            const Final_amount=parseFloat(document.getElementById("final-amt").innerHTML);  
+            if(Final_amount===0){
+                alert("No Balance in account!!")
+            }else if(Final_amount<amount){
+                alert("Insufficient Balance!!")
+            }else{          
+            let sum=Final_amount-amount;
+            document.getElementById("final-amt").innerHTML=sum;            
+        }
+        }
+    </script>
+</body>
+</html>
